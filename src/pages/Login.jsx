@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState} from "react";
 import { Link } from "react-router-dom";
 import { Footer, Navbar } from "../components";
 
 const Login = () => {
+  const [Email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = () => {
+   
+    console.log('Email: ', Email);
+    console.log('Password: ', password);
+  };
   return (
     <>
       <Navbar />
@@ -18,7 +26,9 @@ const Login = () => {
                   type="email"
                   class="form-control"
                   id="floatingInput"
+                  value={Email}
                   placeholder="name@example.com"
+                  onChange={e=>setEmail(e.target.value)}
                 />
               </div>
               <div class="my-3">
@@ -27,14 +37,16 @@ const Login = () => {
                   type="password"
                   class="form-control"
                   id="floatingPassword"
+                  value={password}
                   placeholder="Password"
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
               <div className="my-3">
                 <p>New Here? <Link to="/register" className="text-decoration-underline text-info">Register</Link> </p>
               </div>
               <div className="text-center">
-                <button class="my-2 mx-auto btn btn-dark" type="submit" disabled>
+                <button class="my-2 mx-auto btn btn-dark" type="submit" onClick={handleLogin}>
                   Login
                 </button>
               </div>
