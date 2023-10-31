@@ -17,7 +17,6 @@ import {
   Register,
   Checkout,
   PageNotFound,
-  AdminRoutes,
   Orders,
   AddProduct,
   AdminLogin,
@@ -42,7 +41,6 @@ root.render(
         <Route path="*" element={<PageNotFound />} />
         <Route path="/product/*" element={<PageNotFound />} />
         <Route path="/adminLogin" element={<AdminLogin />} />
-        {/* <Route path="/lamido" element={<AdminRoutes />} /> */}
         <Route path="/adminHome" element={<AdminHome />} />
         <Route path="/Orders" element={<Orders />} />
         <Route path="/AddProduct" element={<AddProduct />} />

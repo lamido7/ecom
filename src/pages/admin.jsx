@@ -16,13 +16,6 @@ export default function AdminRoutes() {
       <div className="dashboard-container">
         <SideBar menu={sidebar_menu} />
 
-        {/* <div className="dashboard-body">
-          <Routes>
-            <Route path="/admin" element={<AdminHome />} />
-            <Route path="/orders" element={<AdminOrders />} />
-            <Route path="/add-product" element={<AdminAddProduct />} />
-          </Routes>
-        </div> */}
       </div>
     </Router>
   );

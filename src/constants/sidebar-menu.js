@@ -7,7 +7,7 @@ const sidebar_menu = [
     {
         id: 1,
         icon: DashboardIcon,
-        path: "/lamido",
+        path: "/adminHome",
         title: 'Dashboard',
     },
     {
