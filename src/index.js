@@ -1,19 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import '../node_modules/font-awesome/css/font-awesome.min.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import store from './redux/store';
-import AI from './AI'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "../node_modules/font-awesome/css/font-awesome.min.css";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
+import {
+  Home,
+  Product,
+  Products,
+  AboutPage,
+  ContactPage,
+  Cart,
+  Login,
+  Register,
+  Checkout,
+  PageNotFound,
+  AdminRoutes,
+  Orders,
+  AddProduct,
+  AdminLogin,
+  AdminHome,
+} from "./pages";
 
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
-
-import { Home, Product, Products, AboutPage, ContactPage, Cart, Login, Register, Checkout, PageNotFound } from "./pages"
-
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Provider store={store}>
@@ -27,11 +39,13 @@ root.render(
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/checkout" element={<Checkout />} />
-        {/* <Route path="*" element={<PageNotFound />} /> */}
+        <Route path="*" element={<PageNotFound />} />
         <Route path="/product/*" element={<PageNotFound />} />
-        <Route path="/admin" element={<AI />} />
-        
-        
+        <Route path="/adminLogin" element={<AdminLogin />} />
+        {/* <Route path="/lamido" element={<AdminRoutes />} /> */}
+        <Route path="/adminHome" element={<AdminHome />} />
+        <Route path="/Orders" element={<Orders />} />
+        <Route path="/AddProduct" element={<AddProduct />} />
       </Routes>
     </Provider>
   </BrowserRouter>

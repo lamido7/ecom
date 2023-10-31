@@ -7,19 +7,19 @@ const sidebar_menu = [
     {
         id: 1,
         icon: DashboardIcon,
-        path: '/',
+        path: "/lamido",
         title: 'Dashboard',
     },
     {
         id: 2,
         icon: ProductIcon,
-        path: '/orders',
+        path: "/Orders",
         title: 'Orders',
     },
     {
         id: 3,
         icon: ShippingIcon,
-        path: '/products',
+        path: "/AddProduct",
         title: 'Products',
     },
     {
