@@ -1,6 +1,6 @@
 import React, { useState} from "react";
 import { Link } from "react-router-dom";
-import { Footer, Navbar } from "../components";
+import { Footer } from "../components";
 
 const AdminLogin = () => {
   const [Email, setEmail] = useState('');
@@ -14,7 +14,7 @@ const AdminLogin = () => {
   };
   return (
     <>
-      {/* <Navbar /> */}
+      
       <div className="container my-3 py-3">
         <h1 className="text-center">Login</h1>
         <hr />
