@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Footer, Navbar } from "../components";
 import { useSelector, useDispatch } from "react-redux";
 import { addCart, delCart } from "../redux/action";
@@ -7,6 +7,9 @@ import { Link } from "react-router-dom";
 const Cart = () => {
   const state = useSelector((state) => state.handleCart);
   const dispatch = useDispatch();
+
+
+  
 
   const EmptyCart = () => {
     return (
@@ -25,9 +28,12 @@ const Cart = () => {
 
   const addItem = (product) => {
     dispatch(addCart(product));
+   
   };
   const removeItem = (product) => {
     dispatch(delCart(product));
+    const updatedCart = state.filter((item)=> item.id !== product.id)  
+    
   };
 
   const ShowCart = () => {
