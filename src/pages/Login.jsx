@@ -6,33 +6,36 @@ const Login = () => {
   const [Email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  
   const handleLogin = () => {
-    fetch('/auth/login', { //replace with api url to send details
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        email: Email,
-        password: password,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        // Handle the response from the server
-        console.log(data);
-  
-        // Redirect to the user dashboard or home page if login is successful
-        // window.location.href = '/ecom';
-      })
-      .catch((error) => {
-        // Handle errors
-        console.error('Error:', error);
-      });
-  };
-  
+   
+    console.log('Email: ', Email);
+    console.log('Password: ', password);
 
+
+    // handle logic
+    // fetch('/auth/login', { //replace with api url to send details
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify({
+    //     email: Email,
+    //     password: password,
+    //   }),
+    // })
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     // Handle the response from the server
+    //     console.log(data);
+  
+    //     // Redirect to the user dashboard or home page if login is successful
+    //     // window.location.href = '/ecom';
+    //   })
+    //   .catch((error) => {
+    //     // Handle errors
+    //     console.error('Error:', error);
+    //   });
+  };
   return (
     <>
       <Navbar />
