@@ -4,6 +4,9 @@
     flex-direction: column;
     overflow: auto;
 }
+.dashboard-content-admin{
+    margin-top: 100px;
+}
 .dashboard-content-container {
     margin: 1em;
     background-color: white;
