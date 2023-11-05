@@ -7,7 +7,7 @@ const Card = ({ title, content }) => {
       <div className="header">
         {title}
       </div>
-      <div className="card-body">
+      <div className="card-body-admin">
         {content}
       </div>
     </div>
