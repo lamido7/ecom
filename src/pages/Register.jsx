@@ -5,11 +5,29 @@ const Register = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  
 
   const handleRegister = () => {
-    console.log("Username: ", username);
-    console.log("Email: ", email);
-    console.log("Password: ", password);
+    fetch('/auth/register', {  //replace with api url to send details
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        username: username,
+        email: email,
+        password: password,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        // Handle the response from the server
+        console.log(data);
+      })
+      .catch((error) => {
+        // Handle errors
+        console.error('Error:', error);
+      });
   };
 
   return (
