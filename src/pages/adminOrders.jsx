@@ -5,14 +5,15 @@ import all_orders from '../constants/orders';
 import {calculateRange, sliceData} from '../utils/table-pagination';
 
 import DashboardHeader from '../components/DashboardHeader'
+import AdNav from '../components/AdNav';
 
 
 import './styles.css';
 import DoneIcon from '../assets/icons/done.svg';
 import CancelIcon from '../assets/icons/cancel.svg';
 import RefundedIcon from '../assets/icons/refunded.svg';
-import SideBar from '../components/Sidebar';
-import sidebar_menu from '../constants/sidebar-menu';
+// import SideBar from '../components/Sidebar';
+// import sidebar_menu from '../constants/sidebar-menu';
 
 function AdminOrders() {
  
@@ -24,7 +25,7 @@ function AdminOrders() {
     useEffect(() => {
         setPagination(calculateRange(all_orders, 5));
         setOrders(sliceData(all_orders, page, 5));
-    }, [page]);
+    }, []);
 
     // Search
     const __handleSearch = (event) => {
@@ -51,7 +52,7 @@ function AdminOrders() {
 
     return(
         <div className="dashboard-container">
-            <SideBar menu={sidebar_menu}/>
+          <AdNav/>
 
        
         <div className="dashboard-body">

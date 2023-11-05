@@ -1,20 +1,19 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Footer } from "../components";
 
 const AdminLogin = () => {
-  const [Email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [Email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleLogin = () => {
     //link to admin home page
-   
-    console.log('Email: ', Email);
-    console.log('Password: ', password);
+
+    console.log("Email: ", Email);
+    console.log("Password: ", password);
   };
   return (
     <>
-      
       <div className="container my-3 py-3">
         <h1 className="text-center">Login</h1>
         <hr />
@@ -29,7 +28,7 @@ const AdminLogin = () => {
                   id="floatingInput"
                   value={Email}
                   placeholder="name@example.com"
-                  onChange={e=>setEmail(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div class="my-3">
@@ -43,7 +42,15 @@ const AdminLogin = () => {
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
-              
+              <div className="text-center">
+                <button
+                  class="my-2 mx-auto btn btn-dark"
+                  type="submit"
+                  onClick={handleLogin}
+                >
+                  Login
+                </button>
+              </div>
             </form>
           </div>
         </div>
